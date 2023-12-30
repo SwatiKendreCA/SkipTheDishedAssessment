@@ -21,13 +21,13 @@ public class EventPublishController {
         return delivery;
     }
 
-    @PostMapping(value="/api/deliveryCreated")
+    @PostMapping(value="/api/adjustmentCreated")
     public Adjustment sendAdjustmentMessage(@RequestBody Adjustment adjustment){
         eventProducer.sendAdjustmentModificationMessage(adjustment);
         return adjustment;
     }
 
-    @PostMapping(value="/api/deliveryCreated")
+    @PostMapping(value="/api/bonusCreated")
     public Bonus sendBonusMessage(@RequestBody Bonus bonus){
         eventProducer.sendBonusModificationMessage(bonus);
         return bonus;
